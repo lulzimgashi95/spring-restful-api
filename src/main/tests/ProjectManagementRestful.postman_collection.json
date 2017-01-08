@@ -1,0 +1,713 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ProjectManagement",
+		"_postman_id": "18294a7c-d13d-aaed-f1ae-ae251fda18b3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Activity",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Activities",
+					"request": {
+						"url": "http://localhost:8181/activities",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Project Activities",
+					"request": {
+						"url": "http://localhost:8181/activities?projectId={projectId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Member Activities",
+					"request": {
+						"url": "http://localhost:8181/activities?memberId={memberId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Project & Member Activities",
+					"request": {
+						"url": "http://localhost:8181/activities?projectId={projectId}&memberId={memberId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular Activity",
+					"request": {
+						"url": "http://localhost:8181/activities/{activityId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Activity",
+					"request": {
+						"url": "http://localhost:8181/activities/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"name\",\n    \"details\": \"detail\",\n    \"memberId\": \"2f9f54fe-7c17-489a-8192-9ad5592260de\"\n }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Activity",
+					"request": {
+						"url": "http://localhost:8181/activities/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"dcf6022d-e32f-404e-8fcb-9ae6cb53c262\",\n\t\"name\":\"updated\",\n\t\"details\":\"updated\",\n\t\"memberId\":\"88e694d2-0291-4b54-93d1-1c7029e53e7d\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Activity",
+					"request": {
+						"url": "http://localhost:8181/activities/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"dcf6022d-e32f-404e-8fcb-9ae6cb53c262\",\n\t\"name\":\"1\",\n\t\"details\":\"1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Comments",
+					"request": {
+						"url": "http://localhost:8181/comments",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Comments",
+					"request": {
+						"url": "http://localhost:8181/comments?projectId=1178a602-6b4e-492c-8bf3-2f31d6edfaff",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular Comment",
+					"request": {
+						"url": "http://localhost:8181/comments/{commentId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Comment",
+					"request": {
+						"url": "http://localhost:8181/comments/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\":\"comment1\",\n\t\"date\":\"2016-01-01\",\n\t\"projectId\":\"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"url": "http://localhost:8181/comments/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"11a47a34-f534-45bf-8bfa-384ebac94c1e\",\n\t\"comment\":\"c12\",\n\t\"date\":\"2017-01-01\",\n\t\"projectId\":\"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"url": "http://localhost:8181/comments/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"11a47a34-f534-45bf-8bfa-384ebac94c1e\",\n\t\"comment\":\"comment1\",\n\t\"date\":\"2016-01-01\",\n\t\"projectId\":\"1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Members",
+					"request": {
+						"url": "http://localhost:8181/members",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Members",
+					"request": {
+						"url": "http://localhost:8181/members?projectId={projectId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular Member",
+					"request": {
+						"url": "http://localhost:8181/members/{memberId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Member",
+					"request": {
+						"url": "http://localhost:8181/members/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"firstName\",\n  \"lastName\": \"lastName\",\n  \"startDate\": \"2016-01-01\",\n  \"position\": \"2017-01-01\",\n  \"activities\": [],\n  \"image\": null,\n  \"projectId\": \"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Member",
+					"request": {
+						"url": "http://localhost:8181/members/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"68d87591-5479-4831-bcd4-fbe5e7395508\",\n  \"firstName\": \"updated\",\n  \"lastName\": \"updated\",\n  \"startDate\": \"2016-12-31\",\n  \"position\": \"CEO44\",\n  \"image\": null,\n  \"projectId\": \"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Member",
+					"request": {
+						"url": "http://localhost:8181/members/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"68d87591-5479-4831-bcd4-fbe5e7395508\",\n  \"firstName\": \"lulim44\",\n  \"lastName\": \"gashi44\",\n  \"startDate\": \"2016-12-31\",\n  \"position\": \"CEO44\",\n  \"activities\": [],\n  \"image\": null,\n  \"projectId\": \"3\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Projects",
+					"request": {
+						"url": "http://localhost:8181/projects/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular Project",
+					"request": {
+						"url": "http://localhost:8181/projects/{projectId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Project",
+					"request": {
+						"url": "http://localhost:8181/projects/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Project\",\n\t\"description\":\"ProjectDescription\",\n\t\"startDate\":\"2016-01-01\",\n\t\"deadLine\":\"2016-01-01\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"url": "http://localhost:8181/projects/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1178a602-6b4e-492c-8bf3-2f31d6edfaff\",\n\t\"name\":\"Update\",\n\t\"description\":\"descUpdate\",\n\t\"startDate\":\"2016-01-03\",\n\t\"deadLine\":\"2015-01-03\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"url": "http://localhost:8181/projects/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"15c3ecb3-46a9-455b-907b-c4d776e47680\",\n\t\"name\":\"project3\",\n\t\"description\":\"desc3\",\n\t\"startDate\":\"2016-01-03\",\n\t\"deadLine\":\"2015-01-03\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sponsor",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Sponsors",
+					"request": {
+						"url": "http://localhost:8181/sponsors/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Sponsors",
+					"request": {
+						"url": "http://localhost:8181/sponsors?projectId={projectId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular Sponsor",
+					"request": {
+						"url": "http://localhost:8181/sponsors/{sponsorId}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Sponsor",
+					"request": {
+						"url": "http://localhost:8181/sponsors/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Sponsor\",\n\t\"amount\":1,\n\t\"comment\":\"Comment\",\n\t\"projectId\":\"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sponsor",
+					"request": {
+						"url": "http://localhost:8181/sponsors/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"f63b6f12-e976-4577-be28-34c60b3e815b\",\n\t\"name\":\"name2\",\n\t\"amount\":3,\n\t\"comment\":\"comment2\",\n\t\"projectId\":\"1178a602-6b4e-492c-8bf3-2f31d6edfaff\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sponsor",
+					"request": {
+						"url": "http://localhost:8181/sponsors/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"f63b6f12-e976-4577-be28-34c60b3e815b\",\n\t\"name\":\"sponsor1\",\n\t\"amount\":1,\n\t\"comment\":\"comment1\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Example Template",
+			"request": {
+				"url": "http://localhost:8181/projects/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"project3\",\n  \"description\": \"desc\",\n  \"startDate\": \"2016-01-01\",\n  \"deadLine\": \"2015-01-01\",\n  \"members\": [\n    {\n      \"firstName\": \"lulzim\",\n      \"lastName\": \"gashi\",\n      \"startDate\": \"2016-12-31\",\n      \"position\": \"CEO\",\n      \"activities\": [\n        {\n          \"name\": \"ads\",\n          \"details\": \"deta\"\n        },\n        {\n          \"name\": \"ads\",\n          \"details\": \"deta\"\n        }\n      ],\n      \"image\": null\n    },\n    {\n      \"firstName\": \"lulim\",\n      \"lastName\": \"gashi\",\n      \"startDate\": \"2016-12-31\",\n      \"position\": \"CEO\",\n      \"activities\": [\n        {\t\n          \"name\": \"ads\",\n          \"details\": \"deta\"\n        }\n      ],\n      \"image\": null\n    }\n  ],\n  \"sponsors\": [\n    {\n      \"name\": \"sponsor\",\n      \"amount\": 23,\n      \"comment\": \"comment\"\n    },\n    {\n      \"name\": \"sponsor\",\n      \"amount\": 23.34,\n      \"comment\": \"comment\"\n    }\n  ],\n  \"comments\": [\n    {\n      \"comment\": \"comment1\",\n      \"date\": \"2016-01-01\"\n    },\n    {\n      \"comment\": \"comment1\",\n      \"date\": \"2016-01-01\"\n    },\n    {\n      \"comment\": \"comment1\",\n      \"date\": \"2016-01-01\"\n    }\n  ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
